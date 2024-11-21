@@ -1,3 +1,6 @@
+"use client";
+import { usePathname } from "next/navigation";
+
 import Link from "next/link";
 import dynamic from "next/dynamic";
 import { SignInButton, SignedIn, SignedOut, UserButton } from "@clerk/nextjs";
@@ -5,6 +8,12 @@ import { SignInButton, SignedIn, SignedOut, UserButton } from "@clerk/nextjs";
 const ThemeBtn = dynamic(() => import("./themeBtn"));
 
 export default function Header() {
+  const pathname = usePathname();
+
+  if (pathname === "/resources") {
+    return null;
+  }
+
   return (
     <>
       <header className="flex justify-around items-center py-4 border-b">
