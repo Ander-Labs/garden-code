@@ -31,109 +31,63 @@ import {
 // This is sample data.
 const data = {
   user: {
-    name: "shadcn",
+    name: "Garden Code",
     email: "m@example.com",
     avatar: "/avatars/shadcn.jpg",
   },
   teams: [
     {
-      name: "Acme Inc",
+      name: "Garden Code",
       logo: GalleryVerticalEnd,
       plan: "Enterprise",
     },
     {
-      name: "Acme Corp.",
+      name: "Roadmap",
       logo: AudioWaveform,
       plan: "Startup",
     },
     {
-      name: "Evil Corp.",
+      name: "Patrocinar",
       logo: Command,
       plan: "Free",
     },
   ],
   navMain: [
     {
-      title: "Playground",
+      title: "Front-End",
       url: "#",
       icon: SquareTerminal,
       isActive: true,
       items: [
         {
-          title: "History",
+          title: "All",
           url: "#",
         },
         {
-          title: "Starred",
+          title: "Webs",
           url: "#",
         },
         {
-          title: "Settings",
+          title: "Repositorios",
           url: "#",
         },
       ],
     },
     {
-      title: "Models",
+      title: "Back-End",
       url: "#",
       icon: Bot,
       items: [
         {
-          title: "Genesis",
+          title: "All",
           url: "#",
         },
         {
-          title: "Explorer",
+          title: "Webs",
           url: "#",
         },
         {
-          title: "Quantum",
-          url: "#",
-        },
-      ],
-    },
-    {
-      title: "Documentation",
-      url: "#",
-      icon: BookOpen,
-      items: [
-        {
-          title: "Introduction",
-          url: "#",
-        },
-        {
-          title: "Get Started",
-          url: "#",
-        },
-        {
-          title: "Tutorials",
-          url: "#",
-        },
-        {
-          title: "Changelog",
-          url: "#",
-        },
-      ],
-    },
-    {
-      title: "Settings",
-      url: "#",
-      icon: Settings2,
-      items: [
-        {
-          title: "General",
-          url: "#",
-        },
-        {
-          title: "Team",
-          url: "#",
-        },
-        {
-          title: "Billing",
-          url: "#",
-        },
-        {
-          title: "Limits",
+          title: "Repositorios",
           url: "#",
         },
       ],
@@ -141,7 +95,7 @@ const data = {
   ],
   projects: [
     {
-      name: "Design Engineering",
+      name: "Stack Code",
       url: "#",
       icon: Frame,
     },
@@ -151,7 +105,7 @@ const data = {
       icon: PieChart,
     },
     {
-      name: "Travel",
+      name: "API-Cloner",
       url: "#",
       icon: Map,
     },
@@ -169,9 +123,11 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
         <NavProjects projects={data.projects} />
       </SidebarContent>
       <SidebarFooter className="flex justify-end items-center text-white">
-        {/* <NavUser user={data.user} /> */}
-
-        <UserButton showName={true} />
+        <NavUser user={data.user} />
+        {/* <Button className="">
+          <UserButton showName={true} />
+        </Button> */}
+        {/* <UserButton /> */}
       </SidebarFooter>
       <SidebarRail />
     </Sidebar>
