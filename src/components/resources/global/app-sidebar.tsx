@@ -1,7 +1,13 @@
 "use client";
 
 import * as React from "react";
-import { Bot, ExternalLink, SquareTerminal, Github, Heart } from "lucide-react";
+import {
+  Server,
+  ExternalLink,
+  Github,
+  Heart,
+  AppWindow,
+} from "lucide-react";
 
 import { NavMain } from "@/components/resources/global/nav-main";
 import { NavProjects } from "./nav-projects";
@@ -23,39 +29,39 @@ const data = {
     {
       title: "Front-End",
       url: "/resources/front-end",
-      icon: SquareTerminal,
+      icon: AppWindow,
       isActive: true,
       items: [
         {
           title: "All",
-          url: "/resources/front-end",
+          url: "/resources/frontend",
         },
         {
           title: "Webs",
-          url: "/resources/front-end/web",
+          url: "/resources/frontend/web",
         },
         {
           title: "Repositorios",
-          url: "/resources/front-end/repositorios",
+          url: "/resources/frontend/repositorios",
         },
       ],
     },
     {
       title: "Back-End",
-      url: "/resources/back-end",
-      icon: Bot,
+      url: "/resources/backend",
+      icon: Server,
       items: [
         {
           title: "All",
-          url: "/resources/back-end",
+          url: "/resources/backend",
         },
         {
           title: "Webs",
-          url: "/resources/back-end/webs",
+          url: "/resources/backend/webs",
         },
         {
           title: "Repositorios",
-          url: "/resources/back-end/repositorios",
+          url: "/resources/backend/repositorios",
         },
       ],
     },

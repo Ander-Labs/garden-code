@@ -19,7 +19,7 @@ export function TeamSwitcher() {
           <SidebarMenuButton size="lg" asChild>
             <Link href="/resources">
               <div className="flex aspect-square size-8 items-center justify-center rounded-lg bg-sidebar-primary text-sidebar-primary-foreground">
-                <LayoutDashboard className="size-4" />
+                <LayoutDashboard className="size-4 text-white" />
               </div>
               <div className="flex flex-col gap-0.5 leading-none">
                 <span className="font-semibold">Garden Code</span>
