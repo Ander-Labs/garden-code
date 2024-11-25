@@ -21,11 +21,11 @@ import {
   SidebarContent,
   SidebarFooter,
   SidebarHeader,
-
   SidebarRail,
 } from "@/components/ui/sidebar";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
+import { FormNewsLater } from "./formNewsLater";
 
 // This is sample data.
 const data = {
@@ -99,28 +99,15 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
   return (
     <Sidebar collapsible="icon" {...props}>
       <SidebarHeader>
-        <TeamSwitcher  />
-        {/* <Button asChild variant={"ghost"} className="py-6 border gap-4">
-          <Link href="/resources">
-            {" "}
-            <span className="rounded-full bg-primary p-2 ">
-              <LayoutDashboard />
-            </span>
-            Garden Code
-          </Link>
-        </Button> */}
-     
+        <TeamSwitcher />
       </SidebarHeader>
       <SidebarContent>
         <NavMain items={data.navMain} />
         <NavProjects projects={data.projects} />
       </SidebarContent>
       <SidebarFooter className="flex justify-end items-center text-white">
-        <NavUser user={data.user} />
-        {/* <Button className="">
-          <UserButton showName={true} />
-        </Button> */}
-        {/* <UserButton /> */}
+        {/* <NavUser user={data.user} /> */}
+        {/* <FormNewsLater /> */}
       </SidebarFooter>
       <SidebarRail />
     </Sidebar>
