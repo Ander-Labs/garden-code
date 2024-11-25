@@ -1,5 +1,6 @@
 import dynamic from "next/dynamic";
 
+import { SignInButton, SignedIn, SignedOut, UserButton } from "@clerk/nextjs";
 import { SidebarInset, SidebarProvider } from "@/components/ui/sidebar";
 import { AppSidebar } from "@/components/resources/global/app-sidebar";
 
@@ -15,7 +16,8 @@ export default function Layout({ children }: { children: React.ReactNode }) {
         <SidebarInset>
           <header className="flex justify-between h-16 shrink-0 items-center gap-2 transition-[width,height] ease-linear group-has-[[data-collapsible=icon]]/sidebar-wrapper:h-12 border-b mb-4">
             <BreadcrumbNav />
-            <div className="pr-4">
+            <div className="pr-4 flex justify-around items-center gap-2">
+              <UserButton />
               <ThemeBtn />
             </div>
           </header>

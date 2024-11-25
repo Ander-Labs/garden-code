@@ -16,6 +16,22 @@
     # Search for the extensions you want on https://open-vsx.org/ and use "publisher.id"
     extensions = [
       # "vscodevim.vim"
+      "aaron-bond.better-comments"
+      "adpyke.codesnap"
+      "bradlc.vscode-tailwindcss"
+      "chamboug.js-auto-backticks"
+      "christian-kohler.path-intellisense"
+      "esbenp.prettier-vscode"
+      "formulahendry.auto-close-tag"
+      "formulahendry.auto-rename-tag"
+      "mhutchie.git-graph"
+      "oderwat.indent-rainbow"
+      "PKief.material-icon-theme"
+      "PulkitGangwar.nextjs-snippets"
+      "rangav.vscode-thunder-client"
+      "shardulm94.trailing-spaces"
+      "teabyii.ayu"
+      "usernamehw.errorlens"
     ];
     workspace = {
       # Runs when a workspace is first created with this `dev.nix` file

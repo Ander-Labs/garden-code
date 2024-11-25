@@ -1,10 +1,9 @@
 "use client";
 
 import {
-  Folder,
-  Forward,
+  Github,
   MoreHorizontal,
-  Trash2,
+  SquareArrowOutUpRight,
   type LucideIcon,
 } from "lucide-react";
 
@@ -12,7 +11,6 @@ import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
-  DropdownMenuSeparator,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 import {
@@ -31,6 +29,7 @@ export function NavProjects({
   projects: {
     name: string;
     url: string;
+    github: string;
     icon: LucideIcon;
   }[];
 }) {
@@ -43,7 +42,7 @@ export function NavProjects({
         {projects.map((item) => (
           <SidebarMenuItem key={item.name}>
             <SidebarMenuButton asChild>
-              <a href={item.url}>
+              <a href={item.url} target="_blank" rel="noopener noreferrer">
                 <item.icon />
                 <span>{item.name}</span>
               </a>
@@ -61,27 +60,42 @@ export function NavProjects({
                 align={isMobile ? "end" : "start"}
               >
                 <DropdownMenuItem>
-                  <Folder className="text-muted-foreground" />
-                  <span>View Project</span>
+                  <a
+                    href={item.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex justify-center items-center gap-2"
+                  >
+                    <SquareArrowOutUpRight className="text-muted-foreground" />
+                    <span>View Project</span>
+                  </a>
                 </DropdownMenuItem>
                 <DropdownMenuItem>
-                  <Forward className="text-muted-foreground" />
-                  <span>Share Project</span>
-                </DropdownMenuItem>
-                <DropdownMenuSeparator />
-                <DropdownMenuItem>
-                  <Trash2 className="text-muted-foreground" />
-                  <span>Delete Project</span>
+                  <a
+                    href={item.github}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex justify-center items-center gap-2"
+                  >
+                    <Github className="text-muted-foreground" />
+                    <span>Project Code </span>
+                  </a>
                 </DropdownMenuItem>
               </DropdownMenuContent>
             </DropdownMenu>
           </SidebarMenuItem>
         ))}
         <SidebarMenuItem>
-          <SidebarMenuButton className="text-sidebar-foreground/70">
-            <MoreHorizontal className="text-sidebar-foreground/70" />
-            <span>More</span>
-          </SidebarMenuButton>
+          <a
+            href="https://github.com/Ander-Labs"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <SidebarMenuButton className="text-sidebar-foreground/70">
+              <MoreHorizontal className="text-sidebar-foreground/70" />
+              <span>más proyectos</span>
+            </SidebarMenuButton>
+          </a>
         </SidebarMenuItem>
       </SidebarMenu>
     </SidebarGroup>
