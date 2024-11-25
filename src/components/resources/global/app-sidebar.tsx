@@ -3,18 +3,14 @@
 import * as React from "react";
 import {
   AudioWaveform,
-  BookOpen,
   Bot,
   Command,
-  Frame,
   GalleryVerticalEnd,
-  Map,
-  PieChart,
-  Settings2,
+  ExternalLink,
   SquareTerminal,
 } from "lucide-react";
 
-import { SignInButton, SignedIn, SignedOut, UserButton } from "@clerk/nextjs";
+// import { SignInButton, SignedIn, SignedOut, UserButton } from "@clerk/nextjs";
 
 import { NavMain } from "@/components/resources/global/nav-main";
 import { NavProjects } from "./nav-projects";
@@ -25,8 +21,11 @@ import {
   SidebarContent,
   SidebarFooter,
   SidebarHeader,
+
   SidebarRail,
 } from "@/components/ui/sidebar";
+import { Button } from "@/components/ui/button";
+import Link from "next/link";
 
 // This is sample data.
 const data = {
@@ -35,23 +34,7 @@ const data = {
     email: "m@example.com",
     avatar: "/avatars/shadcn.jpg",
   },
-  teams: [
-    {
-      name: "Garden Code",
-      logo: GalleryVerticalEnd,
-      plan: "Enterprise",
-    },
-    {
-      name: "Roadmap",
-      logo: AudioWaveform,
-      plan: "Startup",
-    },
-    {
-      name: "Patrocinar",
-      logo: Command,
-      plan: "Free",
-    },
-  ],
+
   navMain: [
     {
       title: "Front-End",
@@ -97,17 +80,17 @@ const data = {
     {
       name: "Stack Code",
       url: "#",
-      icon: Frame,
+      icon: ExternalLink,
     },
     {
       name: "Sales & Marketing",
       url: "#",
-      icon: PieChart,
+      icon: ExternalLink,
     },
     {
       name: "API-Cloner",
       url: "#",
-      icon: Map,
+      icon: ExternalLink,
     },
   ],
 };
@@ -116,7 +99,17 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
   return (
     <Sidebar collapsible="icon" {...props}>
       <SidebarHeader>
-        <TeamSwitcher teams={data.teams} />
+        <TeamSwitcher  />
+        {/* <Button asChild variant={"ghost"} className="py-6 border gap-4">
+          <Link href="/resources">
+            {" "}
+            <span className="rounded-full bg-primary p-2 ">
+              <LayoutDashboard />
+            </span>
+            Garden Code
+          </Link>
+        </Button> */}
+     
       </SidebarHeader>
       <SidebarContent>
         <NavMain items={data.navMain} />

@@ -38,7 +38,7 @@ export default function BreadcrumbNav() {
   return (
     <div className="flex items-center gap-2 px-4">
       <SidebarTrigger className="-ml-1" />
-      <Separator className="mr-2 h-4" />
+      <Separator  className="mr-2 h-4" />
       <Breadcrumb>
         <BreadcrumbList>
           <BreadcrumbItem className="hidden md:block">
