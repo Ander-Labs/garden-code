@@ -10,9 +10,10 @@ const ThemeBtn = dynamic(() => import("./themeBtn"));
 export default function Header() {
   const pathname = usePathname();
 
-  if (pathname === "/resources") {
+  if (pathname.startsWith("/resources")) {
     return null;
   }
+
 
   return (
     <>

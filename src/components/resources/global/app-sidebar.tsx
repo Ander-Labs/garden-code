@@ -55,40 +55,40 @@ const data = {
   navMain: [
     {
       title: "Front-End",
-      url: "#",
+      url: "/resources/front-end",
       icon: SquareTerminal,
       isActive: true,
       items: [
         {
           title: "All",
-          url: "#",
+          url: "/resources/front-end",
         },
         {
           title: "Webs",
-          url: "#",
+          url: "/resources/front-end/web",
         },
         {
           title: "Repositorios",
-          url: "#",
+          url: "/resources/front-end/repositorios",
         },
       ],
     },
     {
       title: "Back-End",
-      url: "#",
+      url: "/resources/back-end",
       icon: Bot,
       items: [
         {
           title: "All",
-          url: "#",
+          url: "/resources/back-end",
         },
         {
           title: "Webs",
-          url: "#",
+          url: "/resources/back-end/webs",
         },
         {
           title: "Repositorios",
-          url: "#",
+          url: "/resources/back-end/repositorios",
         },
       ],
     },
