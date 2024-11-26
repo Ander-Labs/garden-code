@@ -1,3 +1,4 @@
+import { ScrollArea } from "@/components/ui/scroll-area";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 
 import dynamic from "next/dynamic";
@@ -13,8 +14,9 @@ export default function FormsSelect() {
           <TabsTrigger value="backend">Back-End</TabsTrigger>
         </TabsList>
         <TabsContent value="frontend">
-          Formulario de Front-End
-          <FormFront />
+          <ScrollArea className="mx-auto h-[500px]">
+            <FormFront />
+          </ScrollArea>
         </TabsContent>
         <TabsContent value="backend">Formulario de Back-End</TabsContent>
       </Tabs>
