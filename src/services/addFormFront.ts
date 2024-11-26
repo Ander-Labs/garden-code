@@ -1,19 +1,17 @@
 
 
-export async function AddFormFront(state: FormState, formData: FormData) {
-  // Validate form fields
-  const validatedFields = SignupFormSchema.safeParse({
-    name: formData.get("name"),
-    email: formData.get("email"),
-    password: formData.get("password"),
-  });
+import {  collection, addDoc } from "firebase/firestore";
+import { db } from "@/config/firebase/firebaseConfig";
 
-  // If any form fields are invalid, return early
-  if (!validatedFields.success) {
-    return {
-      errors: validatedFields.error.flatten().fieldErrors,
-    };
+
+export async function addFormFront(data: any) {
+
+  try {
+    const recommendationsRef = collection(db, "recommendations_front");
+    const docRef = await addDoc(recommendationsRef, data);
+    return docRef.id; // Retorna el ID del documento creado si necesitas usarlo
+  } catch (error) {
+    console.error("Error al guardar la recomendación:", error);
+    throw new Error("No se pudo guardar la recomendación. Intenta nuevamente.");
   }
-
-  // Call the provider or db to create a user...
 }
