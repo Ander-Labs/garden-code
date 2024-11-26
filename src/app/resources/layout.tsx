@@ -5,6 +5,7 @@ import { SidebarInset, SidebarProvider } from "@/components/ui/sidebar";
 import { AppSidebar } from "@/components/resources/global/app-sidebar";
 
 import BreadcrumbNav from "@/components/resources/global/breadcrumb-nav";
+import BtnAdd from "@/components/resources/add/btnAdd";
 
 const ThemeBtn = dynamic(() => import("@/components/global/themeBtn"));
 
@@ -22,6 +23,9 @@ export default function Layout({ children }: { children: React.ReactNode }) {
             </div>
           </header>
           <main>{children}</main>
+          <div className="fixed bottom-0 right-0 pr-6 md:pr-10  pb-10 ">
+            <BtnAdd />
+          </div>
         </SidebarInset>
       </SidebarProvider>
     </>
